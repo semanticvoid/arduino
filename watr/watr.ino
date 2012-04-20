@@ -42,7 +42,7 @@ void loop() {
     lcd.print(" mL");
   }
   // flash
-    if(((int)vol.f) % FLASHINTERVAL == 0) {
+    if(((int)vol.f) > 0 && ((int)vol.f) % FLASHINTERVAL == 0) {
       for(int i=0; i<2; i++) {
         lcd.noDisplay();
         digitalWrite(PIN, HIGH);
